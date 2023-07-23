@@ -4,12 +4,18 @@ package com.kraftTech.pages;
 import com.kraftTech.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public abstract class BasePage {
     public BasePage(){
         PageFactory.initElements(Driver.get(),this);
     }
+
+    @FindBy(css = "nav>ul>li")
+    public List<WebElement> basePageTabs;
 
     public void navigateToTabsAndModules(String tabName,String moduleName){
         String tabXpath="//span[text()='"+tabName+"']";
