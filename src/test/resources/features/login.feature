@@ -50,3 +50,15 @@ Feature: Login Functionality
       | password  | Mg12345678       |
       | username  | Melih Gezer      |
     Then The user should be able to login
+
+
+  Scenario Outline: Login test with scenario outline
+    Given The user is on the login page
+    When The user logs in with valid credentials "<userEmail>" and "<password>"
+    Then The user should be able to login
+    And Verify that the username on the dashboard page is "<username>"
+    Examples:
+      | userEmail        | password   | username    |
+      | mgezer@gmail.com | Mg12345678 | Melih Gezer |
+      | rosa@test.com    | Test123456 | Rosa        |
+      | Ramanzi@test.com | Test123456 | Mansimmo    |
