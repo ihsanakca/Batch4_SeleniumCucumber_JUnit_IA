@@ -31,7 +31,7 @@ Feature: Add Education Tests
       | To Date                 |
       | Program Description     |
 
-  @wip
+
   Scenario Outline: Add education form test with scenario outline
     Given The user is on the login page
     When The user logs in with valid credentials "<userEmail>" and "<password>"
