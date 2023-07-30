@@ -1,3 +1,4 @@
+@regression
 Feature: Dashboard tests
 
 @wip
@@ -13,4 +14,4 @@ Feature: Dashboard tests
       | Components    |
       | Forms         |
       | JavaScript    |
-      | Melih Gezer61 |
+      | Melih Gezer |

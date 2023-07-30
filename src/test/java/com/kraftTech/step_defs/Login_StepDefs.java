@@ -74,7 +74,7 @@ public class Login_StepDefs {
         ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
 
         List<Map<String, String>> dataList = excelUtil.getDataList();
-        String email=dataList.get(row-2).get(yourEmail);
+        String email=dataList.get(row).get(yourEmail);
         String pass=dataList.get(row).get(password);
 
         loginPage.login(email,pass);
