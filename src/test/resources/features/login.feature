@@ -42,7 +42,7 @@ Feature: Login Functionality
       | Melih Gezer      |
     Then The user should be able to login
 
-  @wip
+
   Scenario: Login with cucumber map
     Given The user is on the login page
     When The user logins with following map
@@ -51,7 +51,7 @@ Feature: Login Functionality
       | username  | Melih Gezer      |
     Then The user should be able to login
 
-@wip
+
   Scenario Outline: Login test with scenario outline
     Given The user is on the login page
     When The user logs in with valid credentials "<userEmail>" and "<password>"
@@ -60,5 +60,5 @@ Feature: Login Functionality
     Examples:
       | userEmail        | password   | username    |
       | mgezer@gmail.com | Mg12345678 | Melih Gezer |
-      | rosa@test.com    | Test123456 | Rosa 61     |
+      | rosa@test.com    | Test123456 | Rosa        |
       | Ramanzi@test.com | Test123456 | Mansimmo    |

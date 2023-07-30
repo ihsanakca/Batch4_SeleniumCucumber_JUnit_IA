@@ -1,6 +1,6 @@
 Feature: Dashboard tests
 
-@wip
+
   Scenario: Dashboard Menu tests (Usage of cucumber list)
 
     Given The user is on the login page
@@ -8,9 +8,9 @@ Feature: Dashboard tests
     Then The user should be able to login
     And Verify that the username on the dashboard page is "Melih Gezer"
     And The user should be able to see all following tabs that shown on the page
-      | Dashboard     |
-      | Developers    |
-      | Components    |
-      | Forms         |
-      | JavaScript    |
-      | Melih Gezer61 |
+      | Dashboard   |
+      | Developers  |
+      | Components  |
+      | Forms       |
+      | JavaScript  |
+      | Melih Gezer |
