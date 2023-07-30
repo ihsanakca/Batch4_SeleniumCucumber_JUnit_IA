@@ -50,5 +50,9 @@ public class Main {
             System.out.println("samsung,'"+iterator1.next()+"',"+iterator.next());
         }
 
+        System.out.println("----------------------");
+
+        System.out.println("System.getenv(\"Password\") = " + System.getenv("Password"));
+
     }
 }

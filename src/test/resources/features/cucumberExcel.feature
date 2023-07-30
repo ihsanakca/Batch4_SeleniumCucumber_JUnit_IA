@@ -1,6 +1,6 @@
 Feature: Cucumber tests with excel file
 
-  @wip
+
   Scenario Outline: Login Test with excel file
     Given The user is on the login page
     When The user logins with valid credentials "Your Email" and "Password" from excel file "<path>", "<sheetName>",<rowNumber>
