@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/kraftTech/step_defs",
         dryRun = false,
-        tags = "@regression"
+        tags = "@w"
 )
 public class CukesRunner {
 }

@@ -42,7 +42,7 @@ Feature: Login Functionality
       | Melih Gezer      |
     Then The user should be able to login
 
-  @wip
+  @wip @w
   Scenario: Login with cucumber map
     Given The user is on the login page
     When The user logins with following map
