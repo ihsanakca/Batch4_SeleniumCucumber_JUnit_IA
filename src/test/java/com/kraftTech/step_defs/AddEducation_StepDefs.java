@@ -51,8 +51,10 @@ public class AddEducation_StepDefs {
 
     @When("The user fills the Add Education Form with excel file {string}, {string}, {int}")
     public void the_user_fills_the_add_education_form_with_excel_file(String path, String sheetName, Integer row) {
-        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
-        List<Map<String, String>> dataList = excelUtil.getDataList();
+//        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+//        List<Map<String, String>> dataList = excelUtil.getDataList();
+
+        List<Map<String, String>> dataList = addEducationPage.getExcelData(path, sheetName);
 
         String school=dataList.get(row).get("school");
         String degree=dataList.get(row).get("degree");

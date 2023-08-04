@@ -29,8 +29,9 @@ public class UserProfile_StepDefs {
 
     @Then("The user should be able to see last added record with {string} via excel file {string}, {string}, {int}")
     public void the_user_should_be_able_to_see_last_added_record_with_via_excel_file(String schoolName, String path, String sheetName, Integer row) {
-        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
-        List<Map<String, String>> dataList = excelUtil.getDataList();
+//        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+//        List<Map<String, String>> dataList = excelUtil.getDataList();
+        List<Map<String, String>> dataList = userProfilePage.getExcelData(path, sheetName);
 
         String actualRecord = userProfilePage.addedEducation(dataList.get(row).get(schoolName));
         String expectedRecord=dataList.get(row).get(schoolName);
@@ -39,8 +40,9 @@ public class UserProfile_StepDefs {
     }
     @Then("The user should be able to delete last added record with {string} via excel file {string}, {string}, {int}")
     public void the_user_should_be_able_to_delete_last_added_record_with_via_excel_file(String schoolName, String path, String sheetName, Integer row) {
-        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
-        List<Map<String, String>> dataList = excelUtil.getDataList();
+//        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+//        List<Map<String, String>> dataList = excelUtil.getDataList();
+        List<Map<String, String>> dataList = userProfilePage.getExcelData(path, sheetName);
 
         String schoolNameRecord=dataList.get(row).get(schoolName);
 

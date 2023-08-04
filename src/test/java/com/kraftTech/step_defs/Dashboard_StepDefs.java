@@ -34,9 +34,11 @@ public class Dashboard_StepDefs {
 
     @Then("Verify that {string} is visible on dashboard page with excel file {string}, {string},{int}")
     public void verify_that_is_visible_on_dashboard_page_with_excel_file(String yourName, String path, String sheetName, Integer row) {
-        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+//        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+//
+//        List<Map<String, String>> dataList = excelUtil.getDataList();
 
-        List<Map<String, String>> dataList = excelUtil.getDataList();
+        List<Map<String, String>> dataList = dashboardPage.getExcelData(path, sheetName);
 
         String expectedUsername = dataList.get(row).get(yourName);
         String actualUsername=dashboardPage.userName.getText();
@@ -46,8 +48,10 @@ public class Dashboard_StepDefs {
 
     @When("The user navigates to tab and module via {string} and {string} from excel file {string}, {string},{int}")
     public void the_user_navigates_to_tab_and_module_via_and_from_excel_file_row_number(String yourName, String moduleName, String path, String sheetName, Integer row) {
-        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
-        List<Map<String, String>> dataList = excelUtil.getDataList();
+//        ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+//        List<Map<String, String>> dataList = excelUtil.getDataList();
+
+        List<Map<String, String>> dataList = dashboardPage.getExcelData(path, sheetName);
 
         String yourNameData=dataList.get(row).get(yourName);
         String module=dataList.get(row).get(moduleName);
